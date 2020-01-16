@@ -39,9 +39,13 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APPS = ["users.apps.UsersConfig"]
+PROJECT_APPS = [
+    "core.apps.CoreConfig",
+    "users.apps.UsersConfig",
+    "rooms.apps.RoomsConfig",
+]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = ["django_countries"]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
 
@@ -119,4 +123,5 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+# 만든 유저모델을 사용하기 위해 추가하였음
 AUTH_USER_MODEL = "users.User"
