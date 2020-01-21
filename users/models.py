@@ -41,7 +41,7 @@ class User(AbstractUser):
     )
 
     # 모델 선언부
-    avatar = models.ImageField(blank=True)
+    avatar = models.ImageField(blank=True, upload_to="avatars")
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10)
     bio = models.TextField(blank=True)
     birthdate = models.DateField(null=True)
